@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <div style="z-index: -32180973213; width: 100vw; height: 100%;position: fixed; top:0;left:0;opacity: 0.2;">
+        <div class="bg-effect" style="z-index: -999999!important;"></div>
+    </div>
+
+
+    <div id="wrapper" style="background: rgba(0,0,0,0);">
+        <div class="d-flex flex-column" id="content-wrapper" style="background: transparent;">
+            <div id="content">
+                <div class="container-fluid" style="padding-left: 20px;">
+                    <div class="d-sm-flex justify-content-between align-items-center mb-4" style="margin-top: 8rem">
+                        <!-- <h3 class="mb-0 text-success" style="margin-top: 8rem"><b>Control Panel<b></h3> -->
+                            <h3>Latitude -></h3><input type="text" placeholder="Tha latitude..." id="latInput">
+                            <h3>Longitude -></h3><input type="text" placeholder="Tha longitude..." id="longInput"> 
+                            <button class="btn btn-warning" onclick="getData()">Change</button> 
+                    </div>
+                    <h3 id="location" style="margin-bottom: 2rem"></h3>
+                    <div class="row">
+                        <div class="col" style=" z-index: -1;">
+                            <div class="iconin hot">
+                                <span class="sun"></span>
+                                <span class="sunx"></span>
+                            </div>
+                            <div class="card" style="background: rgb(246,194,62);color: rgb(255,255,255);">
+                                <div class="card-body"
+                                    style="background: linear-gradient(-13deg, rgb(231,166,26) 77%, rgb(255,240,203) 100%), #2033dd;">
+                                    <p class="card-text">Temperature</p>
+                                    <h4 id="temperature" class="card-title">Loading</h4>
+                                    <p id="temperatureDescription" class="card-text">Loading</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col" style=" z-index: -1;">
+                            <div class="iconin cloudy">
+                                <span class="cloud"></span>
+                                <span class="cloudx"></span>
+                            </div>
+                            <div class="card" style="background: rgb(66,208,217);color: rgb(255,255,255);">
+
+                                <div class="card-body"
+                                    style="background: linear-gradient(-13deg, rgb(62,213,246) 77%, rgb(203,246,255) 100%), #2033dd;padding-bottom: 44px;">
+
+                                    <p class="card-text">Wind</p>
+                                    <h4 id="windspeed" class="card-title">Loading</h4>
+                                </div>
+                            </div>
+                            <div class="card"></div>
+                        </div>
+                        <div class="col" style=" z-index: -1;">
+                            <div class="iconin breezy">
+                                <ul>
+
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <span class="cloudr"></span>
+
+
+                            </div>
+                            <div class="card">
+                                <div class="card-body"
+                                    style="background: linear-gradient(-13deg, rgb(62,169,246) 77%, rgb(203,239,255) 100%), #2033dd;color: rgb(255,255,255);padding-bottom: 44px;">
+                                    <p class="card-text">Humidity</p>
+                                    <h4 id="humidity" class="card-title">Loading</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col" style=" z-index: -1;">
+                            <div class="iconin night">
+                                <span class="moon"></span>
+                                <span class="spot1"></span>
+                                <span class="spot2"></span>
+                                <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+
+                            </div>
+                            <div class="card">
+                                <div class="card-body"
+                                    style="color: rgb(255,255,255);background: linear-gradient(-13deg, rgb(62,80,246) 83%, rgb(187,197,251) 100%), #2033dd;padding-bottom: 44px;">
+                                    <p class="card-text">Atmospheric Pressure</p>
+                                    <h4 id="pressure" class="card-title">Loading</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+</body>
+</html>
